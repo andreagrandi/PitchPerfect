@@ -43,6 +43,9 @@
                             <constraint firstItem="jRG-Ag-3LX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v1Z-VW-LlI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordingLabel" destination="1Bt-2A-kNo" id="v4o-rK-O5s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
