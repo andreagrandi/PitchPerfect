@@ -24,27 +24,32 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oNG-LV-Pg4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bt-2A-kNo">
-                                <frame key="frameInset" minX="134" minY="356" width="107" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bt-2A-kNo">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-oL-RUK">
-                                <frame key="frameInset" minX="134" minY="385" width="106" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-oL-RUK">
                                 <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e11-df-hqe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Kgv-oL-RUK" firstAttribute="top" secondItem="1Bt-2A-kNo" secondAttribute="bottom" constant="34" id="9hO-hE-RB4"/>
                             <constraint firstItem="jRG-Ag-3LX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fer-3Q-468"/>
+                            <constraint firstItem="1Bt-2A-kNo" firstAttribute="top" secondItem="jRG-Ag-3LX" secondAttribute="bottom" constant="35.5" id="HeL-0N-S5N"/>
+                            <constraint firstItem="Kgv-oL-RUK" firstAttribute="centerX" secondItem="1Bt-2A-kNo" secondAttribute="centerX" id="W10-nq-m7I"/>
+                            <constraint firstItem="1Bt-2A-kNo" firstAttribute="centerX" secondItem="jRG-Ag-3LX" secondAttribute="centerX" id="WPe-QH-Dtb"/>
                             <constraint firstItem="jRG-Ag-3LX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v1Z-VW-LlI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="recordingButton" destination="jRG-Ag-3LX" id="bs9-l4-RnZ"/>
                         <outlet property="recordingLabel" destination="1Bt-2A-kNo" id="v4o-rK-O5s"/>
+                        <outlet property="stopRecordingButton" destination="Kgv-oL-RUK" id="Up6-hs-Slb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
