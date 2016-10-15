@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController {
+class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
@@ -45,6 +45,8 @@ class RecordSoundsViewController: UIViewController {
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
         
         try! audioRecorder = AVAudioRecorder(url: filePath!, settings: [:])
+        
+        audioRecorder.delegate = self
         audioRecorder.isMeteringEnabled = true
         audioRecorder.prepareToRecord()
         audioRecorder.record()
@@ -67,5 +69,26 @@ class RecordSoundsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         stopRecordingButton.isEnabled = false
+    }
+    
+    func audioRecorderDidFinishRecording(
+        _ recorder: AVAudioRecorder, successfully flag: Bool) {
+        
+        print("AVAudioRecorder finished")
+        
+        if (flag) {
+            self.performSegue(
+                withIdentifier: "stopRecording", sender: audioRecorder.url)
+        } else {
+            print("Saving of recording failed")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "stopRecording") {
+            let playSoundsVC = segue.destination as! PlaySoundsViewController
+            let recordedAudioURL = sender as! NSURL
+            playSoundsVC.recordedAudioURL = recordedAudioURL
+        }
     }
 }

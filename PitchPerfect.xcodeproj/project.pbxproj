@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		657E88C81DB2ACA600D32037 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657E88C71DB2ACA500D32037 /* PlaySoundsViewController.swift */; };
 		65D156A31D6E3ED40019B4C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D156A21D6E3ED40019B4C6 /* AppDelegate.swift */; };
 		65D156A51D6E3ED40019B4C6 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D156A41D6E3ED40019B4C6 /* RecordSoundsViewController.swift */; };
 		65D156A81D6E3ED40019B4C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D156A61D6E3ED40019B4C6 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		657E88C71DB2ACA500D32037 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		65D1569F1D6E3ED40019B4C6 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65D156A21D6E3ED40019B4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65D156A41D6E3ED40019B4C6 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				65D156A21D6E3ED40019B4C6 /* AppDelegate.swift */,
 				65D156A41D6E3ED40019B4C6 /* RecordSoundsViewController.swift */,
+				657E88C71DB2ACA500D32037 /* PlaySoundsViewController.swift */,
 				65D156A61D6E3ED40019B4C6 /* Main.storyboard */,
 				65D156A91D6E3ED40019B4C6 /* Assets.xcassets */,
 				65D156AB1D6E3ED40019B4C6 /* LaunchScreen.storyboard */,
@@ -188,7 +191,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Andrea Grandi";
 				TargetAttributes = {
 					65D1569E1D6E3ED40019B4C6 = {
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D156A51D6E3ED40019B4C6 /* RecordSoundsViewController.swift in Sources */,
+				657E88C81DB2ACA600D32037 /* PlaySoundsViewController.swift in Sources */,
 				65D156A31D6E3ED40019B4C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,8 +336,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -355,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -378,8 +384,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -395,9 +403,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
