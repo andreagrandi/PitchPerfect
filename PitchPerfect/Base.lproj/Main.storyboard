@@ -18,21 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRG-Ag-3LX">
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oNG-LV-Pg4"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Bt-2A-kNo">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-oL-RUK">
-                                <state key="normal" title="Stop Recording"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-oL-RUK">
+                                <state key="normal" image="stopRecordingButtonImages"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e11-df-hqe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRG-Ag-3LX">
+                                <state key="normal" image="recordButtonImages"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oNG-LV-Pg4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,13 +47,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="recordingButton" destination="jRG-Ag-3LX" id="bs9-l4-RnZ"/>
+                        <outlet property="recordButton" destination="jRG-Ag-3LX" id="li3-Gi-9ya"/>
                         <outlet property="recordingLabel" destination="1Bt-2A-kNo" id="v4o-rK-O5s"/>
                         <outlet property="stopRecordingButton" destination="Kgv-oL-RUK" id="Up6-hs-Slb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="recordButtonImages" width="100" height="100"/>
+        <image name="stopRecordingButtonImages" width="50" height="50"/>
+    </resources>
 </document>
